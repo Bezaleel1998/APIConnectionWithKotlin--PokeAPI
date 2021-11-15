@@ -12,6 +12,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 
 import com.bumptech.glide.Glide;
+import com.example.androidapitestproject.Interface.IItemClickListener;
 import com.example.androidapitestproject.Models.Pokemon;
 import com.example.androidapitestproject.R;
 
@@ -21,6 +22,7 @@ public class PokemonListAdapter extends RecyclerView.Adapter<PokemonListAdapter.
 
     Context context;
     List<Pokemon> pokemonList;
+    IItemClickListener itemClickListener;
 
     public PokemonListAdapter(Context context, List<Pokemon> pokemonList) {
         this.context = context;
@@ -41,6 +43,8 @@ public class PokemonListAdapter extends RecyclerView.Adapter<PokemonListAdapter.
         Glide.with(context).load(pokemonList.get(position).getImg()).into(holder.pokeImage);
         //SetName
         holder.pokeName.setText(pokemonList.get(position).getName());
+        //event
+
 
     }
 
@@ -49,16 +53,30 @@ public class PokemonListAdapter extends RecyclerView.Adapter<PokemonListAdapter.
         return pokemonList.size();
     }
 
-    public class MyViewHolder extends RecyclerView.ViewHolder {
+    public class MyViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
 
         ImageView pokeImage;
         TextView pokeName;
+
+
 
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
 
             pokeImage = (ImageView) itemView.findViewById(R.id.pokemon_image);
             pokeName = (TextView) itemView.findViewById(R.id.txt_pokemon_name);
+
+            itemView.setOnClickListener(this);
+
         }
+
+        @Override
+        public void onClick(View v) {
+            itemClickListener.onClick(v, getAdapterPosition());
+        }
+
     }
+
+
+
 }
