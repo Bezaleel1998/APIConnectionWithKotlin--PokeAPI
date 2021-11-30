@@ -3,6 +3,9 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Project/AndroidStudioProject/APIConnectionWithKotlin--PokeAPI/AndroidAPITestProject/app/src/main/res/layout/activity_main.xml" value="0.14947916666666666" />
+        <entry key="..\:/Project/AndroidStudioProject/APIConnectionWithKotlin--PokeAPI/AndroidAPITestProject/app/src/main/res/layout/fragment_pokemon_list.xml" value="0.14947916666666666" />
+        <entry key="..\:/Project/AndroidStudioProject/APIConnectionWithKotlin--PokeAPI/AndroidAPITestProject/app/src/main/res/layout/pokemon_list_item.xml" value="0.14427083333333332" />
         <entry key="..\:/Project/AndroidStudioProject/AndroidAPITestProject/app/src/main/res/layout/activity_main.xml" value="0.12183383991894631" />
         <entry key="..\:/Project/AndroidStudioProject/AndroidAPITestProject/app/src/main/res/layout/fragment_pokemon_list.xml" value="0.128125" />
         <entry key="..\:/Project/AndroidStudioProject/AndroidAPITestProject/app/src/main/res/layout/pokemon_list_item.xml" value="0.128125" />
